@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Notes App</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
 </head>
 <body>
     <div class="container">
         <h1>My Notes</h1>
 
-        <form action="/" method="post">
-            <input type="text" name="title" placeholder="Title" required><br>
-            <textarea name="content" placeholder="Write your note here..." required></textarea><br>
+        <form id="note-form" action="/" method="post">
+            <input type="text" name="title" placeholder="Title" maxlength="100" required />
+            <textarea name="content" placeholder="Write your note here..." required></textarea>
             <button type="submit">Add Note</button>
         </form>
 
-        <div class="notes">
+        <div class="notes" id="notes-list">
             {% for note in notes %}
-                <div class="note">
+                <div class="note" data-id="{{ note.id }}">
                     <h3>{{ note.title }}</h3>
                     <p>{{ note.content }}</p>
+                    <button class="delete-btn">Delete</button>
                 </div>
             {% endfor %}
         </div>
     </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
