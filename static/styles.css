@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.notes {
+    margin-top: 30px;
+}
+
+.note {
+    background: #eeeeee;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
