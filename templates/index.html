@@ -17,12 +17,14 @@
 
         <div class="notes" id="notes-list">
             {% for note in notes %}
-                <div class="note" data-id="{{ note.id }}">
-                    <h3>{{ note.title }}</h3>
-                    <p>{{ note.content }}</p>
-                    <button class="delete-btn">Delete</button>
-                </div>
+            <div class="note" data-id="{{ note.id }}">
+                <h3>{{ note.title }}</h3>
+                <p>{{ note.content }}</p>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </div>
             {% endfor %}
+        
         </div>
     </div>
 
